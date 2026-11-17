@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tesla callback</title></head>
+<body style="font-family:sans-serif;padding:30px;font-size:20px">
+<h2>認証コード</h2><p>下のコードをコピーしてCabin Commanderに渡してください。</p>
+<textarea id="c" rows="4" cols="60" readonly></textarea><br><button onclick="navigator.clipboard.writeText(document.getElementById('c').value)">コピー</button>
+<script>var p=new URLSearchParams(location.search);document.getElementById('c').value=p.get('code')||p.get('error')||'(コードなし)';</script>
+</body></html>
